@@ -9,10 +9,10 @@ const fetchUserData = async () => {
         }
 
         const data = await response.json();
-        const filteredUsers = data.filter(user => user.username.startsWith('C'));
-
-        return filteredUsers;
-    } catch (error) {
+        const filteredUsers = data.filter(user => user.username.startsWith('C')); // Sei que na API tem um nome com a Letra C, 
+                                                                                  // mas não consegui entender o porqquê não esta 
+        return filteredUsers;                                                     // puxando o nome corretamente, mas estarei 
+    } catch (error) {                                                             // trabalhando pra entender o porquê.
 
         console.error('Error fetching user data:', error);
         throw error;
